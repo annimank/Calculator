@@ -1,3 +1,28 @@
+import React from 'react';
+import Calc from './components/Calc';
+import History from './components/History';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
+export default function App() {
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Calculator" component={Calc} />
+        <Stack.Screen name="History" component={History} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+
+}
+
+/*
+THIS IS THE OG APP THAT WORKS, W/O THE NAVIGATION, ANNI KEEP THIS -->
+*/
+/*
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, FlatList, ScrollView, Pressable, Image, KeyboardAvoidingView } from 'react-native';
@@ -165,3 +190,4 @@ const styles = StyleSheet.create({
   },
 
 });
+*/
